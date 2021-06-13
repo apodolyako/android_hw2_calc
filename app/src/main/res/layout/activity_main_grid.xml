@@ -1,160 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="@integer/column_count"
     android:layout_gravity="center"
     android:layout_margin="@dimen/gridMargin"
-    android:foregroundGravity="bottom">
+    android:foregroundGravity="bottom"
+    android:theme="@style/CalcButtonStyle"
+    >
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/current"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnSpan="@integer/column_count"
         android:layout_marginBottom="@dimen/calcResultMarginBottom"
-        android:textSize="@dimen/textResSize" />
+        android:textSize="@dimen/textResSizeExpStr"
+        style="@style/CalcTextView"
+        />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/result"
         android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnSpan="@integer/column_count"
         android:layout_marginBottom="@dimen/calcResultMarginBottom"
-        android:textSize="@dimen/textResSize" />
+        android:textSize="@dimen/textResSizeValStr"
+        style="@style/CalcTextView"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_CE"
-        style="@style/CalcButtonStyle"
         android:layout_height="wrap_content"
         android:layout_columnSpan="2"
         android:text="@string/buttonCE"
         android:layout_gravity="fill_horizontal"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Back"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonBack"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Div"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonDiv"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_7"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button7"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_8"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button8"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_9"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button9"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Mult"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonMult"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_4"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button4" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_5"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button5" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_6"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button6" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Plus"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonPlus" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_1"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button1" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_2"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_3"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button3" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Sub"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonSub" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_0"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button0" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Dot"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_700"
         android:text="@string/buttonDot" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_Eq"
-        style="@style/CalcButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnSpan="2"
         android:layout_gravity="fill_horizontal"
         android:text="@string/buttonEq" />
 
-    />
-
-
-</GridLayout>
+ </GridLayout>
