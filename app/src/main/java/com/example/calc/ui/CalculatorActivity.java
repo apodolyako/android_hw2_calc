@@ -42,70 +42,70 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         findViewById(R.id.btn_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_1_Clicked();
+                presenter.onBtn_Clicked("1");
             }
         });
 
         findViewById(R.id.btn_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_2_Clicked();
+                presenter.onBtn_Clicked("2");
             }
         });
 
         findViewById(R.id.btn_3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_3_Clicked();
+                presenter.onBtn_Clicked("3");
             }
         });
 
         findViewById(R.id.btn_4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_4_Clicked();
+                presenter.onBtn_Clicked("4");
             }
         });
 
         findViewById(R.id.btn_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_5_Clicked();
+                presenter.onBtn_Clicked("5");
             }
         });
 
         findViewById(R.id.btn_6).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_6_Clicked();
+                presenter.onBtn_Clicked("6");
             }
         });
 
         findViewById(R.id.btn_7).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_7_Clicked();
+                presenter.onBtn_Clicked("7");
             }
         });
 
         findViewById(R.id.btn_8).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_8_Clicked();
+                presenter.onBtn_Clicked("8");
             }
         });
 
         findViewById(R.id.btn_9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_9_Clicked();
+                presenter.onBtn_Clicked("9");
             }
         });
 
         findViewById(R.id.btn_0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.onBtn_0_Clicked();
+                presenter.onBtn_Clicked("0");
             }
         });
 

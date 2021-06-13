@@ -12,9 +12,7 @@ public class CalculatorPresenter {
 
     private Calculator calculator;
 
-    private String lastClick ="";
-    private String[] btnOperation = {"-", "+", "*", "/"};
-    private String[] btnNum = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+    private String lastClick;
     private String btnClick;
     private Operation operator;
     ArrayList<String> expStr = new ArrayList<>();
@@ -22,70 +20,19 @@ public class CalculatorPresenter {
     public CalculatorPresenter(CalculatorView view, Calculator calculator) {
         this.view = view;
         this.calculator = calculator;
+        this.lastClick = "";
     }
 
 //--------------Обрабатываем нажатие кнопок с цифрами
 
-    public void onBtn_1_Clicked() {
+
+    public void onBtn_Clicked(String number){
         //как-то реагируем на событие что пользователь нажал кнопку 1
-        btnClick = "1";
+        btnClick = number;
         enterOperand(btnClick);
-        view.showExpression(getExpStr());
+        view.showExpression((getExpStr()));
     }
 
-    public void onBtn_2_Clicked() {
-        btnClick = "2";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
-
-    public void onBtn_3_Clicked() {
-        btnClick = "3";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
-
-    public void onBtn_4_Clicked() {
-        btnClick = "4";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
-
-    public void onBtn_5_Clicked() {
-        btnClick = "5";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
-
-    public void onBtn_6_Clicked() {
-        btnClick = "6";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
-
-    public void onBtn_7_Clicked() {
-        btnClick = "7";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
-
-    public void onBtn_8_Clicked() {
-        btnClick = "8";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
-
-    public void onBtn_9_Clicked() {
-        btnClick = "9";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
-
-    public void onBtn_0_Clicked() {
-        btnClick = "0";
-        enterOperand(btnClick);
-        view.showExpression(getExpStr());
-    }
 
 //------------------Обрабатываем операторы + - * /
 
@@ -121,6 +68,9 @@ public class CalculatorPresenter {
     }
 
     private void enterOperand(String btnClick){
+
+        String[] btnOperation = {"-", "+", "*", "/"};
+        String[] btnNum = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
 
         if(checkIsOperation(lastClick, btnOperation) && checkIsOperation(btnClick, btnOperation)){
             expStr.set(expStr.size()-1, btnClick);
