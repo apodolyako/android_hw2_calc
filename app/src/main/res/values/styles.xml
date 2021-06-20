@@ -2,8 +2,13 @@
 <resources>
     <style name="CalcButtonStyle">
         <item name="android:textSize">@dimen/textButtonSize</item>
-        <item name="backgroundTint">@color/my_teal</item>
-        <item name="android:textColor">@color/white</item>
+<!--        <item name="backgroundTint">@color/red</item>-->
+<!--        <item name="android:textColor">@color/white</item>-->
+    </style>
+
+    <style name="CalcTextView" >
+        <item name="android:textColor">@color/black</item>
+
     </style>
 
 </resources>
