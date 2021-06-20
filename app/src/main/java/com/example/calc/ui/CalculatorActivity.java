@@ -2,14 +2,17 @@ package com.example.calc.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.calc.R;
 import com.example.calc.domain.CalculatorImpl;
+import com.google.android.material.radiobutton.MaterialRadioButton;
 
-public class CalculatorActivity extends AppCompatActivity implements CalculatorView {
+public class CalculatorActivity extends BaseActivity implements CalculatorView {
 
     private CalculatorPresenter presenter;
 
@@ -17,12 +20,46 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
 
     private TextView resultVal;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
+        initThemeChooser();
+
         initView();
+    }
+
+    private void initThemeChooser() {
+        initRadioButton(findViewById(R.id.radioButtonLight), AppThemeLightCodeStyle);
+        initRadioButton(findViewById(R.id.radioButtonDark), AppThemeDarkCodeStyle);
+
+        RadioGroup rg = findViewById(R.id.radioButtons);
+
+        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(AppThemeLightCodeStyle))).setChecked(true);
+
+    }
+
+    private void initRadioButton(View button, final int codeStyle) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 setAppTheme(codeStyle);
+//                перезасздаем активити чтобы тема применилась
+                recreate();
+
+               }
+
+            private void setAppTheme(int codeStyle) {
+                SharedPreferences sharePref =
+                        getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharePref.edit();
+                editor.putInt(AppTheme, codeStyle);
+                editor.apply();
+            }
+        });
     }
 
     private void initView() {
@@ -34,7 +71,6 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         showResult("0");
 
         initViewClick();
-
     }
 
     private void initViewClick() {

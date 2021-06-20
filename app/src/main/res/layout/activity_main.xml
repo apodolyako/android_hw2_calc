@@ -4,6 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <include
+        layout="@layout/simple_main_button_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/margin_group_bt"/>
+
     <include
         layout="@layout/activity_main_grid"
         android:layout_width="wrap_content"

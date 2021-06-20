@@ -10,6 +10,7 @@
     android:theme="@style/CalcButtonStyle"
     >
 
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/current"
         android:layout_width="wrap_content"
@@ -17,12 +18,11 @@
         android:layout_columnSpan="@integer/column_count"
         android:layout_marginBottom="@dimen/calcResultMarginBottom"
         android:textSize="@dimen/textResSizeExpStr"
-        style="@style/CalcTextView"
-        />
+        style="@style/CalcTextView"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/result"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/mrgTextV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_columnSpan="@integer/column_count"
