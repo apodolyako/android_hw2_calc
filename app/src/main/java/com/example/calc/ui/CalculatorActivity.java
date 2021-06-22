@@ -46,7 +46,7 @@ public class CalculatorActivity extends BaseActivity implements CalculatorView {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 setAppTheme(codeStyle);
+                setAppTheme(codeStyle);
 //                перезасздаем активити чтобы тема применилась
                 recreate();
 

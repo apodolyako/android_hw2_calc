@@ -7,7 +7,7 @@
     </style>
 
     <style name="CalcTextView" >
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/exp</item>
 
     </style>
 

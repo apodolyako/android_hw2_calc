@@ -7,4 +7,6 @@
     <dimen name="gridMargin">20dp</dimen>
     <dimen name="margin_group_bt">20dp</dimen>
     <dimen name="mrgTextV">30dp</dimen>
+    <dimen name="marginLRcontext">30dp</dimen>
+    <dimen name="expTxtHeight">150dp</dimen>
 </resources>

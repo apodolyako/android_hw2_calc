@@ -33,7 +33,6 @@ public class CalculatorPresenter {
         view.showExpression((getExpStr()));
     }
 
-
 //------------------Обрабатываем операторы + - * /
 
     public void onBtn_Plus_Clicked() {
