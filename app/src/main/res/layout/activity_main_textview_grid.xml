@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    style="@style/CalcTextView">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/current"
+        android:layout_height="@dimen/expTxtHeight"
+        android:layout_marginLeft="@dimen/marginLRcontext"
+        android:layout_marginRight="@dimen/marginLRcontext"
+        android:layout_width="wrap_content"
+        android:layout_columnSpan="@integer/column_count"
+        android:layout_marginBottom="@dimen/calcResultMarginBottom"
+        android:textSize="@dimen/textResSizeExpStr"
+        style="@style/CalcTextView"/>
+
+</GridLayout>

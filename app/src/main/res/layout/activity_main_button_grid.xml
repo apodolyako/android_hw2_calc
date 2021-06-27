@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="4"
+    android:layout_gravity="center"
+    android:theme="@style/CalcButtonStyle" >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result"
+        android:layout_marginLeft="@dimen/marginLRcontext"
+        android:layout_marginRight="@dimen/marginLRcontext"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill_horizontal"
+        android:gravity="right"
+        android:layout_marginBottom="@dimen/calcResultMarginBottom"
+        android:textSize="@dimen/textResSizeValStr" />
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_CE"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:text="@string/buttonCE"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Back"
+        android:text="@string/buttonBack"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Div"
+        android:text="@string/buttonDiv"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_7"
+
+        android:layout_height="wrap_content"
+        android:text="@string/button7"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_8"
+        android:text="@string/button8"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_9"
+        android:text="@string/button9"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Mult"
+        android:text="@string/buttonMult"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_4"
+        android:text="@string/button4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_5"
+        android:text="@string/button5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_6"
+        android:text="@string/button6" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Plus"
+        android:text="@string/buttonPlus" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_1"
+        android:text="@string/button1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_2"
+        android:text="@string/button2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_3"
+        android:text="@string/button3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Sub"
+        android:text="@string/buttonSub" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:text="@string/button0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Eq"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:text="@string/buttonEq" />
+
+ </GridLayout>

@@ -19,4 +19,7 @@
     <string name="button0">0</string>
     <string name="buttonDot">.</string>
     <string name="buttonEq">=</string>
+
+    <string name="light_style">Красный</string>
+    <string name="dark_style">Черный</string>
 </resources>
