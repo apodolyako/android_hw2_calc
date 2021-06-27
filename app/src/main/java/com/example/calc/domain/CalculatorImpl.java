@@ -11,9 +11,10 @@ public class CalculatorImpl implements Calculator {
                 return argOne - argTwo;
             case MULT:
                 return argOne * argTwo;
-            case DIV:
+             case DIV:
                 return argOne / argTwo;
         }
         return 0;
     }
+
 }

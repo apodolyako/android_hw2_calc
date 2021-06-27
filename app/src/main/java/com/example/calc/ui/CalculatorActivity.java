@@ -1,6 +1,8 @@
 package com.example.calc.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import com.example.calc.domain.CalculatorImpl;
 import com.google.android.material.radiobutton.MaterialRadioButton;
 
 public class CalculatorActivity extends BaseActivity implements CalculatorView {
+
+    private final static String KeyCalculator = "Calculator"; // для парселизации
 
     private CalculatorPresenter presenter;
 
@@ -30,6 +34,39 @@ public class CalculatorActivity extends BaseActivity implements CalculatorView {
         initThemeChooser();
 
         initView();
+    }
+
+    //Сохранение данных
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle instanceState){
+        super.onSaveInstanceState(instanceState);
+        instanceState.putParcelable(KeyCalculator, presenter.getData());
+    }
+
+    //Восстановление данных
+    @Override
+    public void onRestoreInstanceState(@NonNull Bundle instanceState){
+        super.onRestoreInstanceState(instanceState);
+        presenter.setData(instanceState.getParcelable(KeyCalculator));
+        setTextData();
+    }
+    //отображение данных на экране
+    private void setTextData() {
+
+        if(presenter.checkFirst()){
+            presenter.getView().showExpression("");
+            presenter.getView().showResult("0");
+            return;
+        }
+
+        if(presenter.checkIsOperation(presenter.getExpStr().split("")[presenter.getExpStr().length()-1], presenter.getBtnOperation())){
+            presenter.getView().showExpression(presenter.getExpStr());
+            presenter.calculate(presenter.exprStrArrListFromStr(presenter.getExpStr().substring(0, presenter.getExpStr().length()-1)));
+            return;
+        }
+
+            presenter.getView().showExpression(presenter.getExpStr());
+            presenter.calculate();
     }
 
     private void initThemeChooser() {
@@ -147,34 +184,49 @@ public class CalculatorActivity extends BaseActivity implements CalculatorView {
 
         findViewById(R.id.btn_Plus).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                presenter.onBtn_Plus_Clicked();
+            public void onClick(View v) { presenter.onBtn_Clicked("+");
             }
         });
 
         findViewById(R.id.btn_Sub).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                presenter.onBtn_Sub_Clicked();
+            public void onClick(View v) { presenter.onBtn_Clicked("-");
             }
         });
 
         findViewById(R.id.btn_Mult).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                presenter.onBtn_Mult_Clicked();
+            public void onClick(View v) { presenter.onBtn_Clicked("*");
             }
         });
 
         findViewById(R.id.btn_Div).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                presenter.onBtn_Div_Clicked();
+            public void onClick(View v) {presenter.onBtn_Clicked("/");
             }
         });
 
-    }
+        findViewById(R.id.btn_CE).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onBtn_CE_Clicked();
+            }
+        });
 
+        findViewById(R.id.btn_Eq).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onBtn_EQ_Clicked();
+            }
+        });
+
+        findViewById(R.id.btn_Back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onBtn_Back_Clicked();
+            }
+        });
+    }
 
     @Override
     public void showExpression(String result) {

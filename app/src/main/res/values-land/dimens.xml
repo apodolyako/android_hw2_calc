@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textButtonSize">18sp</dimen>
+    <dimen name="textResSizeExpStr">18sp</dimen>
+    <dimen name="textResSizeValStr">24sp</dimen>
+    <dimen name="calcResultMarginBottom">5dp</dimen>
+    <dimen name="gridMargin">20dp</dimen>
+    <dimen name="margin_group_bt">20dp</dimen>
+    <dimen name="mrgTextV">20dp</dimen>
+    <dimen name="marginLRcontext">30dp</dimen>
+    <dimen name="expTxtHeight">35dp</dimen>
+</resources>
